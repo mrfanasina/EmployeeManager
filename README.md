@@ -6,8 +6,6 @@
 
   ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
   ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
   ![REST API](https://img.shields.io/badge/REST-API-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
   ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
@@ -20,7 +18,7 @@
 
 ## 📖 Description
 
-**GestionEmployé** est une application Android native permettant de gérer une liste d'employés via une **base de données distante MySQL ou PostgreSQL**. Elle implémente les opérations **CRUD complètes** (Créer, Lire, Mettre à jour, Supprimer), un système de **statistiques salariales** en temps réel, ainsi qu'une **visualisation graphique** des données sous forme d'histogramme ou de camembert.
+**EmployeeManager** est une application Android native permettant de gérer une liste d'employés via une **base de données distante MySQL ou PostgreSQL**. Elle implémente les opérations **CRUD complètes** (Créer, Lire, Mettre à jour, Supprimer), un système de **statistiques salariales** en temps réel, ainsi qu'une **visualisation graphique** des données sous forme d'histogramme ou de camembert.
 
 ---
 
@@ -86,78 +84,6 @@ CREATE TABLE Employe (
 );
 ```
 
-### Logique de l'observation (côté client)
-
-```java
-public static String getObservation(double salaire) {
-    if (salaire < 1000) {
-        return "Médiocre";
-    } else if (salaire <= 5000) {
-        return "Moyen";
-    } else {
-        return "Grand";
-    }
-}
-```
-
-### Calcul des statistiques
-
-```java
-public static double getSalaireTotal(List<Employe> liste) {
-    double total = 0;
-    for (Employe e : liste) total += e.getSalaire();
-    return total;
-}
-
-public static double getSalaireMin(List<Employe> liste) {
-    return liste.stream().mapToDouble(Employe::getSalaire).min().orElse(0);
-}
-
-public static double getSalaireMax(List<Employe> liste) {
-    return liste.stream().mapToDouble(Employe::getSalaire).max().orElse(0);
-}
-```
-
----
-
-## 📁 Structure du Projet
-
-```
-GestionEmploye/
-├── app/
-│   └── src/
-│       └── main/
-│           ├── java/com/example/gestionemploye/
-│           │   ├── activities/
-│           │   │   ├── MainActivity.java         # Liste + statistiques
-│           │   │   ├── AddEmployeActivity.java   # Ajout
-│           │   │   ├── EditEmployeActivity.java  # Modification
-│           │   │   └── ChartActivity.java        # Graphiques
-│           │   ├── adapters/
-│           │   │   └── EmployeAdapter.java       # Adaptateur ListView
-│           │   ├── models/
-│           │   │   └── Employe.java              # Modèle de données
-│           │   ├── network/
-│           │   │   ├── ApiService.java           # Interface Retrofit
-│           │   │   └── RetrofitClient.java       # Configuration HTTP
-│           │   └── utils/
-│           │       └── SalaireUtils.java         # Calcul obs. & stats
-│           └── res/
-│               ├── layout/
-│               │   ├── activity_main.xml
-│               │   ├── activity_add_employe.xml
-│               │   ├── activity_edit_employe.xml
-│               │   ├── activity_chart.xml
-│               │   └── item_employe.xml          # Ligne du ListView
-│               └── values/
-│                   ├── strings.xml
-│                   └── colors.xml
-├── build.gradle
-└── README.md
-```
-
----
-
 ## 🚀 Installation & Configuration
 
 ### Prérequis
@@ -182,15 +108,7 @@ cd gestion-employe
 File > Open > sélectionner le dossier du projet
 ```
 
-3. **Configurer l'URL de l'API** dans `RetrofitClient.java`
-
-```java
-private static final String BASE_URL = "http://votre-serveur.com/api/";
-```
-
-> ⚠️ Pour un test en local avec un émulateur Android, utiliser `http://10.0.2.2/` à la place de `localhost`.
-
-4. **Ajouter les dépendances** dans `build.gradle (app)`
+3. **Ajouter les dépendances** dans `build.gradle (app)`
 
 ```groovy
 dependencies {
@@ -203,25 +121,12 @@ dependencies {
 }
 ```
 
-5. **Synchroniser et lancer**
+4. **Synchroniser et lancer**
 
 ```
 Build > Sync Project with Gradle Files
 Run > Run 'app'
 ```
-
----
-
-## 💡 Utilisation
-
-| Action | Résultat |
-|---|---|
-| ▶️ Lancer l'app | La liste des employés se charge depuis la base distante |
-| ➕ Bouton Ajouter | Ouvre le formulaire d'ajout d'un nouvel employé |
-| 👆 Appui long sur un item | Affiche les options Modifier / Supprimer |
-| 📊 Bas de liste | Affiche le total, min et max des salaires |
-| 📉 Bouton Graphique | Ouvre la vue histogramme ou camembert |
-
 ---
 
 ## 🧠 Concepts Utilisés
