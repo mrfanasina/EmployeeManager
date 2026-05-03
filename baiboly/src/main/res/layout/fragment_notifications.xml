@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===================== -->
+        <!-- 🔢 FAMPIDIRANA -->
+        <!-- ===================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mampiditra ny hira"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/text2"
+            android:paddingBottom="6dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:background="#4E71C7"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_display_panel"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tvSongNumber"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="---"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_number_focus" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_drop_down" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===================== -->
+        <!-- 📊 COMPTE -->
+        <!-- ===================== -->
+
+        <TextView
+            android:id="@+id/tvSongCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 hira misy"
+            android:textSize="12sp"
+            android:textColor="#64748B"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- ===================== -->
+        <!-- 🔢 CLAVIER -->
+        <!-- ===================== -->
+
+        <GridLayout
+            android:id="@+id/numPad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:paddingBottom="16dp">
+
+            <Button style="@style/NumPadButton" android:text="1" android:tag="1"/>
+            <Button style="@style/NumPadButton" android:text="2" android:tag="2"/>
+            <Button style="@style/NumPadButton" android:text="3" android:tag="3"/>
+            <Button style="@style/NumPadButton" android:text="4" android:tag="4"/>
+            <Button style="@style/NumPadButton" android:text="5" android:tag="5"/>
+            <Button style="@style/NumPadButton" android:text="6" android:tag="6"/>
+            <Button style="@style/NumPadButton" android:text="7" android:tag="7"/>
+            <Button style="@style/NumPadButton" android:text="8" android:tag="8"/>
+            <Button style="@style/NumPadButton" android:text="9" android:tag="9"/>
+
+            <ImageButton
+                android:id="@+id/btnBackspace"
+                style="@style/NumPadButton"
+                android:src="@drawable/ic_backspace"
+                app:tint="#EF4444"/>
+
+            <Button style="@style/NumPadButton" android:text="0" android:tag="0"/>
+
+            <ImageButton
+                android:id="@+id/btnValidate"
+                style="@style/NumPadButton"
+                android:src="@drawable/ic_check"
+                app:tint="#10B981"/>
+        </GridLayout>
+
+        <!-- ===================== -->
+        <!-- 📂 SOKAJY -->
+        <!-- ===================== -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hira rehetra "
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="@color/text2"
+            android:paddingBottom="6dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="3dp"
+            android:background="#F59E0B"
+            android:layout_marginBottom="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

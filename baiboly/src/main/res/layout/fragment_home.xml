@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/lohahevitra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lohahevitra 2026"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textColor="@color/title_gray"
+            android:textSize="28sp" />
+        <!-- ========================= -->
+        <!-- 📚 CARD MOFONAINA -->
+        <!-- ========================= -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMofonaina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/textMofonainaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mofonaina"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textMofonainaSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:alpha="0.7"
+                    android:textSize="14sp"
+                    android:text="Chargement..." />
+
+
+                <!-- Détails dynamiques -->
+                <LinearLayout
+                    android:id="@+id/mofonainaDetailsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Les chants et lectures seront ajoutés ici via Java -->
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========================= -->
+        <!-- 📖 CARD READING -->
+        <!-- ========================= -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardReading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mofonaina anio"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="24sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========================= -->
+        <!-- 🌿 CARD PERIKOPA (CORRIGÉE) -->
+        <!-- ========================= -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPerikopa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/textPerikopaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perikopa androany"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="18sp" />
+
+                <!-- 🔥 CONTENEUR VERSETS -->
+                <LinearLayout
+                    android:id="@+id/perikopaContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- ========================= -->
+        <!-- 🕘 CARD HISTORIQUE -->
+        <!-- ========================= -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novakiana Farany"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- CONTENEUR -->
+                <LinearLayout
+                    android:id="@+id/historyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

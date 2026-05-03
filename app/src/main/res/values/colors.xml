@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#DDD2DF</color>
     <color name="blue">#3F51B5</color>
+    <color name="blue2">#97B5D2</color>
+    <color name="blue4">#433B90C6</color>
+    <color name="blue3">#ADB6E4</color>
+    <color name="blue5">#BAC0DD</color>
     <color name="green">#99E299</color>
+    <color name="green1">#094819</color>
     <color name="yellow">#E8CEA8</color>
+    <color name="yellow8">#EDE1CE</color>
     <color name="red">#FA9696</color>
-
+    <color name="gray">#343636</color>
+    <color name="text_primary">#000000</color>
+    <color name="chart_label">#000000</color>
     <!-- rouge transparent -->
-    <color name="emp_mediocre">#33F44336</color>
+    <color name="emp_mediocre">#F44336</color>
 
     <!-- orange transparent -->
-    <color name="emp_moyen">#33FF9800</color>
+    <color name="emp_moyen">#FF9800</color>
 
     <!-- vert transparent -->
-    <color name="emp_grand">#334CAF50</color>
+    <color name="emp_grand">#4CAF50</color>
 
     <!-- bouton supprimer -->
     <color name="delete_red">#D32F2F</color>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="44dp"
+    >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Testamenta Taloha -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testamenta Taloha"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOld"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- Testamenta Vaovao -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Testamenta Vaovao"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNew"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -15,6 +15,9 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            android:background="?attr/colorPrimary"
+            android:textStyle="bold"
+            app:titleTextColor="?attr/colorPrimaryVariant"
             android:layout_height="?attr/actionBarSize" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -25,11 +28,13 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp"
         android:contentDescription="Ajouter"
+        app:backgroundTint="?attr/colorSecondaryVariant"
         android:src="@android:drawable/ic_input_add"
+        app:tint="@color/yellow8"
         app:layout_anchor="@id/nav_host_fragment_content_main"
         app:layout_anchorGravity="bottom|end"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

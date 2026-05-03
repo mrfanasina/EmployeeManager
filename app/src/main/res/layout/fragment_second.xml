@@ -49,11 +49,17 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSave"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="64dp"
+                android:layout_marginBottom="32dp"
                 android:text="Enregistrer"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="?attr/colorSecondaryVariant"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/save_svgrepo_com"
+                app:iconGravity="textStart"
                 android:layout_marginTop="32dp"
-                app:cornerRadius="12dp"/>
-
+                app:iconSize="24dp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

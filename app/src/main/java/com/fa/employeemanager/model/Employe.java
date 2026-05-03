@@ -2,22 +2,22 @@ package com.fa.employeemanager.model;
 
 public class Employe {
 
-    private int numEmp;
+    private int numemp;
     private String nom;
     private double salaire;
 
-    public Employe(int numEmp, String nom, double salaire) {
-        this.numEmp = numEmp;
+    public Employe(int numemp, String nom, double salaire) {
+        this.numemp = numemp;
         this.nom = nom;
         this.salaire = salaire;
     }
 
-    public int getNumEmp() {
-        return numEmp;
+    public int getNumemp() {
+        return numemp;
     }
 
-    public void setNumEmp(int numEmp) {
-        this.numEmp = numEmp;
+    public void setNumemp(int numemp) {
+        this.numemp = numemp;
     }
 
     public String getNom() {
